@@ -18,14 +18,12 @@ public class DisplayProperty {
             List<Vendor> vendorList = vendorFromCSV.processCSVToVendorList(vendor_path);
 
             for(Property property:propertyList){
-                for(Sale sale: saleList){
                         for (Contract contract: contractList){
-                            if(property.getPropertyID().equals(sale.getPropertyID())) {
-                                System.out.print(property.getStreetNumber() + property.getStreet() + "  ");
-                                System.out.println(property.getPropertyType() + "  ");
-                                System.out.println(contract.getStatus() + "  ");
+                            if(property.getPropertyID().equals(contract.getPropertyID())) {
+                                System.out.print(property.getStreetNumber() +" " +property.getStreet() + "  ");
+                                System.out.print(property.getPropertyType() + "  ");
+                                System.out.print(contract.getStatus() + "  ");
                                 System.out.println(contract.getContractDate() + "  ");
-                            }
                     }
                 }
             }
