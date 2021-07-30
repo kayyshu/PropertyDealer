@@ -36,7 +36,7 @@ public class test {
             System.out.println("III) Display for Sale Properties");
             System.out.println("IV) Display Withdrawn Properties");
             if ("I".equals(scanner.next())) {
-                displayProperty.displayAllProperty("/Users/apple/IdeaProjects/Solution/resource/properties.csv","","","");
+                displayProperty.displayAllProperty("/Users/apple/IdeaProjects/Solution/resource/properties.csv","/Users/apple/IdeaProjects/Solution/resource/sales.csv","/Users/apple/IdeaProjects/Solution/resource/contracts.csv","/Users/apple/IdeaProjects/Solution/resource/vendors.csv");
             }
             else if("II".equals(scanner.next())){
                 displayProperty.displaySoldProperty();
@@ -48,10 +48,6 @@ public class test {
                 displayProperty.displayWithdrawnProperty();
             }
         }
-
-
-
-
 
 
 

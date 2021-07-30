@@ -3,7 +3,6 @@ package custom.functions;
 import custom.utils.*;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DisplayProperty {
@@ -15,19 +14,18 @@ public class DisplayProperty {
         try {
             List<Property> propertyList = propertyFromCSV.processCSVToPropertyList(property_path);
             List<Sale> saleList = saleFromCSV.processCSVToSaleList(sale_path);
-            List<Contract> contractList = contractFromCSV.processCSVToContractList(sale_path);
-            List<Vendor> vendorList = vendorFromCSV.processCSVToVendorList(sale_path);
+            List<Contract> contractList = contractFromCSV.processCSVToContractList(contract_path);
+            List<Vendor> vendorList = vendorFromCSV.processCSVToVendorList(vendor_path);
 
             for(Property property:propertyList){
                 for(Sale sale: saleList){
-                    for (Vendor vendor: vendorList){
                         for (Contract contract: contractList){
-                            if(property.getPropertyID().equals(sale.getPropertyID())){
-                                List displayList= new ArrayList();
-                                displayList.add()
-
+                            if(property.getPropertyID().equals(sale.getPropertyID())) {
+                                System.out.print(property.getStreetNumber() + property.getStreet() + "  ");
+                                System.out.println(property.getPropertyType() + "  ");
+                                System.out.println(contract.getStatus() + "  ");
+                                System.out.println(contract.getContractDate() + "  ");
                             }
-                        }
                     }
                 }
             }
